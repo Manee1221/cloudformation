@@ -1,0 +1,112 @@
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+<div ng-app="myApp">
+<div class="container" ng-controller="Ctrl_List">
+  <div class="row">
+    <div class="col-md-12"><h1>AngularJS playground</h1>
+      <blockquote>I am taking a basic AngularJS online tutorial at tutsplus.com <a href="https://dg4txwkuz2odo.cloudfront.net/login">Easier JavaScript Apps with AngularJS</a> by <a href="https://dg4txwkuz2odo.cloudfront.net/login">Tom Ashworth</a>.</blockquote>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6"><h3>Example output</h3></div>
+    <div class="col-md-6"><h3>AngularJS part</h3></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+<h4>People</h4>
+      <select ng-model="names" multiple="multiple " size="2" ng-options="l.name for l in people" class="col-md-12">
+  <option value="">Choose name</option>
+{{$index}}
+</select><br /><br /><br /><br />
+<h4>People grouped by age.</h4>
+      <select ng-model="color" ng-options="l.name group by l.age for l in people">
+      </select><br/> 
+</div>
+
+    <div class="col-md-6">
+      <h4>On the <code>select</code></h4>
+      <blockquote><code>ng-options="l.name for l in people"</code></blockquote>
+      which will populate <code>select</code> with options from <code>$scope.list</code>. <br />
+      <h4>Grouping</h4>
+<blockquote><code>ng-options="l.name group by l.age for l in people"</code></blockquote>
+    </div>
+  </div>
+</div>
+
+<div class="container" ng-controller="example">
+  <div class="row">
+    <hr />
+    <div class="col-md-12">You landed here on {{date.toTimeString()}}, and I am in controller <code>example</code></div></div>
+</div>
+  
+  </div>
+<!-- UNDER CONSTRUNCTION START -->
+<div id="banner"><a href="">Playground</a></div>
+<style type="text/css">
+/* RELATED TO UNDER CONSTRUCTION ONLY */
+#banner{
+      height: 129px;
+			width: 129px;
+			overflow:hidden;
+			padding: 0;
+			margin: 0;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  letter-spacing: 1px;
+}
+#banner a{
+	
+	display: block;
+	width: 190px;
+	font-size: 14px;
+	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", 
+		"Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, 
+		Geneva, "Helvetica Neue", Helvetica, Arial, sans serif;
+	background-color: #333;
+	color: #FFF;
+	word-spacing: 2px;
+	text-decoration: none;
+	padding: 5px 15px 5px 25px;
+	
+	position:relative;
+	left: 20px;
+	top: -37px;
+	text-align: center;
+	
+	-moz-transform-origin: 0 0 ;
+	-moz-transform:rotate(45deg);
+	-moz-box-shadow:    1px 1px 5px 1px #666;
+	
+	-webkit-transform-origin: 0 0 ;	
+	-webkit-transform:rotate(45deg);
+	-webkit-box-shadow: 1px 1px 5px 1px #666;
+	
+	-ms-transform-origin: 0 0 ;	
+	-ms-transform:rotate(45deg);
+	-ms-box-shadow: 1px 1px 5px 1px #666;
+	
+	transform-origin: 0 0 ;	
+	transform:rotate(45deg);
+	box-shadow: 1px 1px 5px 1px #666;
+	
+	background-image: linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+	background-image: -o-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+	background-image: -moz-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+	background-image: -webkit-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+	background-image: -ms-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.03, #000000),
+		color-stop(0.05, #666666),
+		color-stop(0.07, #000000),
+		color-stop(0.93, #000000),
+		color-stop(0.95, #666666),
+		color-stop(0.97, #000000)
+	);	
+	
+}
+</style>
+<!-- UNDER CONSTRUNCTION END -->
